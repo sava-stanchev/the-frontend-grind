@@ -64,7 +64,7 @@ export default function App() {
 
     setFetchingJobDetails(false);
   }
-  console.log(jobs);
+
   return (
     <div className="app">
       <h1 className="title">Hacker News Jobs Board</h1>
