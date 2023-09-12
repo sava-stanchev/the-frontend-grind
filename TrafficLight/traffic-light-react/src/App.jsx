@@ -20,7 +20,11 @@ const config = {
 };
 
 function App() {
-  return <TrafficLight config={config} />;
+  return (
+    <div className="wrapper">
+      <TrafficLight config={config} />
+    </div>
+  );
 }
 
 export default App;

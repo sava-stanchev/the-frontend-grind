@@ -11,13 +11,17 @@ export default function TrafficLight({ config }) {
   useEffect(() => {
     const { duration, next } = config[currColor];
 
-    setTimeout(() => {
+    const timerId = setTimeout(() => {
       setCurrColor(next);
     }, duration);
+
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [config, currColor]);
 
   return (
-    <div className="traffic-lights-container">
+    <div className="traffic-light-container">
       {Object.keys(config).map((color) => (
         <Light
           key={color}
