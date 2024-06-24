@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function App({ sections }) {
+export default function Accordion({ sections }) {
   const [openSections, setOpenSections] = useState(new Set());
 
   return (

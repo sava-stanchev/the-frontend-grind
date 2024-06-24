@@ -1,15 +1,12 @@
 import "./App.css";
 import { useState } from "react";
 
-const newID = (() => {
-  let id = 0;
-  return () => id++;
-})();
+let id = 0;
 
 const INITIAL_TASKS = [
-  { id: newID(), label: "Walk the dog" },
-  { id: newID(), label: "Water the plants" },
-  { id: newID(), label: "Wash the dishes" },
+  { id: id++, label: "Walk the dog" },
+  { id: id++, label: "Water the plants" },
+  { id: id++, label: "Wash the dishes" },
 ];
 
 export default function App() {
@@ -27,7 +24,7 @@ export default function App() {
             return;
           }
 
-          setTasks([...tasks, { id: newID(), label: newTask.trim() }]);
+          setTasks([...tasks, { id: id++, label: newTask.trim() }]);
           setNewTask("");
         }}
       >

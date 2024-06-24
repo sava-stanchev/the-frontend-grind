@@ -2,7 +2,13 @@
 import { useState, useEffect } from "react";
 
 function Light({ backgroundColor }) {
-  return <div className="traffic-light" style={{ backgroundColor }} />;
+  return (
+    <div
+      aria-hidden={true}
+      className="traffic-light"
+      style={{ backgroundColor }}
+    />
+  );
 }
 
 export default function TrafficLight({ config }) {
@@ -21,7 +27,10 @@ export default function TrafficLight({ config }) {
   }, [config, currColor]);
 
   return (
-    <div className="traffic-light-container">
+    <div
+      aria-label={`Current light: ${currColor}`}
+      className="traffic-light-container"
+    >
       {Object.keys(config).map((color) => (
         <Light
           key={color}
