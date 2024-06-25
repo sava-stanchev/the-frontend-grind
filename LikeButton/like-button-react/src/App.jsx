@@ -2,10 +2,6 @@ import { useState } from "react";
 import { HeartIcon, SpinnerIcon } from "./Icons";
 import "./App.css";
 
-function classNames(...args) {
-  return args.filter(Boolean).join(" ");
-}
-
 export default function App() {
   const [liked, setLiked] = useState(false);
   const [isPending, setIsPending] = useState(false);
@@ -44,10 +40,12 @@ export default function App() {
   return (
     <div className="button-container">
       <button
-        className={classNames(
+        className={[
           "like-button",
-          liked ? "like-button--liked" : "like-button--default"
-        )}
+          liked ? "like-button--liked" : "like-button--default",
+        ]
+          .filter(Boolean)
+          .join(" ")}
         disabled={isPending}
         onClick={() => {
           likeUnlikeAction();
