@@ -1,4 +1,7 @@
 /**
+ * Implement a function that recursively
+ * flattens an array into a single level deep
+ *
  * @param {Array<*|Array>} value
  * @return {Array}
  */

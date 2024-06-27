@@ -1,4 +1,6 @@
 /**
+ * Implement the Array.prototype.filter() method
+ *
  * @template T
  * @param { (value: T, index: number, array: Array<T>) => boolean } callbackFn
  * @param {any} [thisArg]

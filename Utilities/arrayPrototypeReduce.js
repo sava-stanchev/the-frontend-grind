@@ -1,4 +1,6 @@
 /**
+ * Implement the Array.prototype.reduce() method
+ *
  * @template T, U
  * @param {(previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U} callbackFn
  * @param {U} [initialValue]

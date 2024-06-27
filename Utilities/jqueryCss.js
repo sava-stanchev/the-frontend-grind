@@ -1,4 +1,7 @@
 /**
+ * Implement a jQuery-like function that
+ * sets the style of a DOM element
+ *
  * @param {string} selector
  * @return {{css: Function}}
  */

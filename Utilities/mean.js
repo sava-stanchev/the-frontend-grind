@@ -1,4 +1,8 @@
 /**
+ * Implement a function mean(array)
+ * that returns the mean (also known as average)
+ * of the values inside array, which is an array of numbers.
+ *
  * @param {Array} array - Array from which the elements are all numbers.
  * @return {Number} Returns mean.
  */

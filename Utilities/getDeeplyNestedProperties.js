@@ -1,4 +1,7 @@
 /**
+ * Implement a function to safely access
+ * deeply-nested properties in JavaScript objects
+ *
  * @param {Object} objectParam
  * @param {string|Array<string>} pathParam
  * @param {*} [defaultValue]
